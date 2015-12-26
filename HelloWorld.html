@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js'></script>
+	</head>
+<body onLoad="onLoad()">
+<script type="text/javascript">
+function AppViewModel() {
+    this.firstName = ko.observable("World");
+}
+function onLoad()
+{
+	ko.applyBindings(new AppViewModel());
+}
+</script>
+
+<p>Write some text: <input data-bind="value: firstName" /></p>
+
+<p>Hello <strong data-bind="text: firstName"></strong>!</p>
+
+</body>
+</html>
